@@ -1,7 +1,9 @@
 variable "project" {
-  description = "The GCP project ID where the bucket will be created"
+  description = "The GCP project ID"
   type        = string
+  default     = "devops-practice-sm" 
 }
+
 variable "bucket_name" {
   description = "Base name for the storage bucket"
   type        = string
