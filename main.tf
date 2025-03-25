@@ -5,8 +5,8 @@ provider "google" {
 
 module "gcs_bucket" {
   source      = "./modules/gcs_bucket"
-  bucket_name = "my-terraform-bucket"
-  location    = "US"
+  bucket_name = var.bucket_name
+  location    = var.location
 }
 
 output "created_bucket_name" {
