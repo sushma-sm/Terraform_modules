@@ -1,16 +1,14 @@
 variable "bucket_name" {
-  description = "The name of the GCS bucket"
+  description = "Name of the GCS bucket"
   type        = string
 }
 
-variable "bucket_location" {
-  description = "The location of the GCS bucket"
+variable "location" {
+  description = "GCS bucket location"
   type        = string
-  default     = "US"
 }
 
-variable "storage_class" {
-  description = "The storage class of the bucket"
+variable "project" {
+  description = "GCP Project ID"
   type        = string
-  default     = "STANDARD"
 }
