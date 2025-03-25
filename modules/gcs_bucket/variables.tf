@@ -1,16 +1,15 @@
-variable "project" {
-  description = "The GCP project ID"
-  type        = string
-  default     = "devops-practice-sm" 
+provider "google" { 
+  project = var.project
+  region  = "us-central1"
 }
 
-variable "bucket_name" {
-  description = "Base name for the storage bucket"
-  type        = string
+module "gcs_bucket" {
+  source      = "./modules/gcs_bucket"
+  bucket_name = var.bucket_name
+  location    = var.location
+  project     = var.project  # Ensure project is passed
 }
 
-variable "location" {
-  description = "Location for the storage bucket"
-  type        = string
-  default     = "US"
+output "created_bucket_name" {
+  value = module.gcs_bucket.bucket_name
 }
