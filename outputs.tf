@@ -1,3 +1,3 @@
 output "bucket_name" {
-  value = google_storage_bucket.bucket.name
+  value = module.gcs_bucket.bucket_name  #  This correctly references the module output
 }
