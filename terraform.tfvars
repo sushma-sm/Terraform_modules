@@ -1,4 +1,10 @@
 project     = "devops-practice-sm"
 bucket_name = "terraform-sm-6"
 storage_class   = "STANDARD"
-location    = "us-central1"
+
+
+vm_name        = "my-vm"
+machine_type   = "e2-medium"
+zone          = "us-central1-a"
+image         = "debian-cloud/debian-11"
+disk_size     = 20
