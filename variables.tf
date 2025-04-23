@@ -1,7 +1,6 @@
 variable "bucket_name" {
   description = "Name of the GCS bucket"
   type        = string
-  default     = "us-central1"
 }
 
 variable "bucket_location" {  #  Must match the module's variable
