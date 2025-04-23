@@ -1,4 +1,4 @@
-project     = "devops-practice-sm"
+project     = "teak-surge-455704-t3"
 bucket_name = "terraform-sm-6"
 storage_class   = "STANDARD"
 
